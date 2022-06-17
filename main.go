@@ -29,7 +29,10 @@ func main() {
 	router.POST("/albums", postAlbums)
 	router.POST("/albums/:id", removeAlbumByID)
 
-	router.Run("localhost:8080")
+	err := router.Run("localhost:8000")
+	if err != nil {
+		return
+	}
 }
 
 // getAlbums responds with the list of all albums as JSON.
