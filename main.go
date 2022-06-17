@@ -29,7 +29,7 @@ func main() {
 	router.POST("/albums", postAlbums)
 	router.POST("/albums/:id", removeAlbumByID)
 
-	err := router.Run("localhost:8000")
+	err := router.Run(":8000")
 	if err != nil {
 		return
 	}
